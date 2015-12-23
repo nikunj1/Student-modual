@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Student Form View1 -->
+		<record model="ir.ui.view" id="view_student_student_form_1">
+			<field name="name">student</field>
+			<field name="model">res.student</field>
+			<field name="arch" type="xml">
+				<form string="Student Information">
+					<header>
+						
+						<button name="many2one" type="object" string="Many2one"
+							 />
+						<!-- <button name="def_write" type="object" string="update"
+							class="crea" />
+						<button name="def_copy" type="object" string="dublicate"
+							class="create" />
+						<button name="def_read" type="object" string="read" class="createghg" />
+						<button name="def_search" type="object" string="search"
+							class="c" /> -->
+							<button name="%(action_test_wizard_form)d" type="action"
+									string="Update Teacher Name" class="oe_highlight" />
+
+ 				   </header>
+					<sheet>
+					 		<!-- <button name="main_val" type="object" string="Update Student" /> -->
+					
+						<group>
+							<group>
+								<field name="name" />
+								<field name="student_id" />
+								<field name="class_id" />
+							</group>
+							<group>
+								 <field name="number"/>
+								 <field name="sum" />
+								<field name="sum1" />  
+								<!--  <field name="dob" on_change="birth_date(dob)"/> 
+								 <field name="age" />  -->
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="view_book_form_1">
+			<field name="name">book</field>
+			<field name="model">res.book</field>
+			<field name="arch" type="xml">
+				<form string="Book Information">
+				<button name="one2many" type="object" string="one2Many"/>
+				<sheet>
+					<group >
+						<group col="4" colspan="4">
+							<field name="name"/>
+							<field name="price"/>
+						
+							<field name="author"/>
+							<!-- <field name="book_ids"/> -->
+							
+						</group>
+						<notebook colspan="4">
+							<page string="Book Assain to student">
+								<tree>
+									<field name="student_ids"/>
+								</tree>
+									
+							
+							</page>
+						</notebook>
+						
+					</group>
+				</sheet>
+				</form>
+			</field>
+		</record>
+		<!--************************Inherit Customer***************************** -->
+	
+	<!-- 	 <record id="view_res_partner_tree" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date_order']" position="after">
+					<field name="skype" />
+				</xpath>
+			 	
+				<xpath expr="//field[@name='order_line']/form//field[@name='price_unit']"
+					position="after">
+					<field name="skype1" />
+				</xpath> 
+				<xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']"
+					position="after">
+					<field name="skype1" />
+				</xpath> 
+			</field>
+		</record> 
+ 
+		<record id="view_invoice_tree" model="ir.ui.view">
+			<field name="name">sale.invoive.form</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+		 	
+				<xpath expr="//field[@name='invoice_line']/tree//field[@name='company_id']"
+					position="after">
+					<field name="skype" />
+				</xpath> 
+			</field>
+		</record> 
+ -->		
+		<record model="ir.actions.act_window" id="action_book_form">
+			<field name="name">Book</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.book</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="action_student_form">
+			<field name="name">student</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.student</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		
+		<menuitem id="main_manu" name="School" />
+		<menuitem id="manu_student" name="Student" parent="main_manu" />
+		<menuitem id="std" name="Student_detail" parent="manu_student"
+			action="action_student_form" />
+		<menuitem id="manu" name="student remainder" parent="main_manu" />
+		<menuitem id="manu_book" name="Book" parent="manu_student" action="action_book_form" />
+		
+
+
+	</data>
+</openerp>
