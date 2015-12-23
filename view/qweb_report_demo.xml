@@ -52,7 +52,7 @@
                 				</div>
                 				
             				</div>
-            		<span t-esc="get_index(o)" />
+            		
             	<table class="table table-condensed">
                 <thead>
                     <tr style="background-color:lightgray;">
@@ -67,10 +67,14 @@
                </thead>
                <tbody class="sale_tbody">
               	
-              		<t t-set="i" t-value="1"/>
-              	
+              		<!-- <t t-set="i" t-value="1"/> -->
+              		
+              		
                     <tr t-foreach="o.order_line" t-as="l">
-                    	 <td> <span t-esc="i"/> </td>
+                    
+                    	 <!-- <td> <span t-esc="i"/> </td> -->
+                    	 <td><span t-esc="get_index(o)" /></td>	
+                    
                         <td>
                            <span t-field="l.name"/>
                         </td>
@@ -87,8 +91,10 @@
                         <td>
                             <span t-field="l.discount"/>
                         </td>
-                       <t t-set="i" t-value="i+1"/>
+                      <!--  <t t-set="i" t-value="i+1"/> -->
+                   
                     </tr>
+              	
                 </tbody>
             </table>
             				
