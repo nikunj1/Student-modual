@@ -11,7 +11,7 @@
     		
     		
     		
- <record id="paperformat_lowmargin" model="report.paperformat">
+ <!-- <record id="paperformat_lowmargin" model="report.paperformat">
     <field name="name">European A4 low margin</field>
     <field name="default" eval="True" />
     <field name="format">A4</field>
@@ -23,13 +23,13 @@
     <field name="margin_left">4</field>
     <field name="margin_right">4</field>
     <field name="header_line" eval="False" />
-    <field name="header_spacing">30</field>
+    <field name="header_spacing">4</field>
     <field name="dpi">90</field>
 </record>
 
 <record id="student.qweb_report" model="ir.actions.report.xml">
     <field name="paperformat_id" ref="student.paperformat_lowmargin" />
-</record>	
+</record>	 -->
     		
     </data>
 </openerp>
