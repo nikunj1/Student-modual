@@ -42,8 +42,7 @@
 
 
 		<template id="qweb_report_demo">
-			<t t-call="student.custom_header" />
-
+			
 			<t t-foreach="docs" t-as="o">
 				<div class="page">
 					<div class="row">
@@ -183,9 +182,8 @@
 				</div>
 
 			</t>
-			<t t-call="student.custom_footer" />
+			
 		</template>
-
 
 	</data>
 </openerp>
