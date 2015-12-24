@@ -11,8 +11,8 @@
 
 						<div class="oe_structure">
 							<div class="row">
+								<span t-esc="data"/>
 								<span>print</span>
-
 							</div>
 					</div>
 				</div>
