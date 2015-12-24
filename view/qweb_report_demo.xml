@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<template id="qweb_report_demo" inherit_id="sale.report_saleorder_document">
+		
+
+		<template id="qweb_report_demo">
 			
-			<xpath expr="//table[@class='table table-condensed']//thead//tr"
-				position="replace">
-				<tr style="background-color:lightgray;">
-					<th>Description</th>
-					<th class="text-right">Price</th>
-				</tr>
-			</xpath>
-			<xpath expr="//tbody[@class='sale_tbody']//tr//td[4]" position="replace">
-			<th>first</th>
-			</xpath>
-			<xpath expr="//tbody[@class='sale_tbody']//tr//td[3]" position="replace">
-			<th >second</th>
-			</xpath>
-			<xpath expr="//tbody[@class='sale_tbody']//tr//td[2]" position="replace">
-			<th>third</th>
-			</xpath>
+			<t t-foreach="docs" t-as="o">
+				<div class="page">
+					<div class="row">
+
+						<div class="oe_structure">
+							<div class="row">
+								<span>print</span>
+
+							</div>
+					</div>
+				</div>
+			</div>
+			</t>
+			
 		</template>
 
 	</data>
