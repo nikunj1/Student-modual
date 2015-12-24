@@ -8,7 +8,7 @@
 			<field name="arch" type="xml">
 				<form string="Student Information">
 					<header>
-						
+						<button name="print_quotation" string="Print" type="object"/>
 						<button name="many2one" type="object" string="Many2one"
 							 />
 						<!-- <button name="def_write" type="object" string="update"
