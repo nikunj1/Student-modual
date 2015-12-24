@@ -7,6 +7,7 @@ class test_wizard(osv.osv_memory):
     _columns = {
                 'old' : fields.many2one('res.student','Old', required=True),
                 'new' : fields.char('New', required=True),
+            
                 
                 } 
     def add_student(self, cr, uid, id, context=None):
