@@ -3,7 +3,7 @@
  	<data>
 		<report 
     		id="qweb_report"
-    		model="sale.order"
+    		model="res.student"
     		string="Product Detail"
     		report_type="qweb-pdf"
     		name="student.qweb_report_demo"
