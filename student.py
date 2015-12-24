@@ -58,6 +58,17 @@ class  res_student(osv.osv):
         print 'name  res.class(1,)'
         
         print browes.student_id
+    def print_quotation(self, cr, uid, ids, context=None):
+        
+#         stage = self.pool['report'].get_action(cr, uid, ids, 'student.qweb_report_demo', context=context)
+#         print stage
+        return {
+                
+                'type':'ir.actions.report.xml',
+                'report_name': 'student.qweb_report_demo',
+                'data': None 
+                
+                }
  
 #     def main_val(self,cr,uid,ids,context=None):
 #         stage = self.pool.get('res.book')
