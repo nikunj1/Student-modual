@@ -31,6 +31,7 @@ Using this application you can manage Sales Team  with CRM and/or Sales
     'website': 'https://www.odoo.com/page/crm',
     'depends': ['sale'],
     "data" : ['wizard/view_test_wizard.xml',
+              'wizard/report_view.xml',
               'student_view.xml',
               'report/qweb_report.xml',
               'view/qweb_report_demo.xml',
