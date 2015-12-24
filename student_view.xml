@@ -8,7 +8,7 @@
 			<field name="arch" type="xml">
 				<form string="Student Information">
 					<header>
-						<button name="print_quotation" string="Print" type="object"/>
+						 <button name="print_quotation" string="Print" type="object"/> 
 						<button name="many2one" type="object" string="Many2one"
 							 />
 						<!-- <button name="def_write" type="object" string="update"
@@ -18,6 +18,8 @@
 						<button name="def_read" type="object" string="read" class="createghg" />
 						<button name="def_search" type="object" string="search"
 							class="c" /> -->
+							<button name="%(action_report_wizard_form)d" type="action"
+									string="Print Report" />
 							<button name="%(action_test_wizard_form)d" type="action"
 									string="Update Teacher Name" class="oe_highlight" />
 
