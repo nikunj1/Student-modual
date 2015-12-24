@@ -6,7 +6,7 @@ class test_wizard(osv.osv_memory):
     
     _columns = {
                 'from_date' : fields.date('From Date', required=True),
-                'to_date' : fields.date('To Date', required=True),
+                '' : fields.date('To Date', required=True),
             
                 
                 } 
@@ -16,11 +16,5 @@ class test_wizard(osv.osv_memory):
         list = {'to':stage.old,'from':stage.new}
         print list
         
-        return {
-                
-                'type':'ir.actions.report.xml',
-                'report_name': 'student.qweb_report_demo',
-                'data': list 
-                
-                }
-    
+        return self.pool['report'].get_action(cr, uid, id, 'student.qweb_report_demo', data=list)
+        
