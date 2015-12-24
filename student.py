@@ -69,6 +69,7 @@ class  res_student(osv.osv):
                 'data': None 
                 
                 }
+        
  
 #     def main_val(self,cr,uid,ids,context=None):
 #         stage = self.pool.get('res.book')
